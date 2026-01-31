@@ -1,9 +1,9 @@
 services:
   perplexica:
-    image: itzcrazykns1337/perplexica:latest
+    # image: itzcrazykns1337/perplexica:latest
     container_name: perplexica
-    # build:
-      # context: .
+    build:
+      context: .
     ports:
       - '3003:3000'
     volumes:
