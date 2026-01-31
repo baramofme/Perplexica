@@ -1,6 +1,7 @@
 services:
   perplexica:
     image: itzcrazykns1337/perplexica:latest
+    container_name: perplexica
     # build:
       # context: .
     ports:
