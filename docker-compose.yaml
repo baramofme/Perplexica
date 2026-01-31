@@ -8,7 +8,13 @@ services:
     volumes:
       - data:/home/perplexica/data
     restart: unless-stopped
+    networks:
+      - dokploy-network  
 
 volumes:
   data:
     name: 'perplexica-data'
+    
+networks:
+  dokploy-network:
+    external: true
