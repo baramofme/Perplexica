@@ -8,6 +8,13 @@ search:
   formats:
     - html
     - json
+  # Gemini 추천 LLM의 판단을 흐리게 하는 커뮤니티성 노이즈를 여기서 더 막아버리면 8B 모델의 답변 품질이 급격히 올라갑니다.
+  excluded_sites:
+    - namu.wiki       # 나무위키 제거
+    - mirror.enha.kr  # 엔하위키 미러 등도 포함
+    - arca.live       # 아카라이브 (나무위키 계열)
+    - gall.dcinside.com # 디시인사이드 (정보의 파편화가 심함)
+    - ruliweb.com     # 루리웹
 
 server:
   secret_key: 'a2fb23f1b02e6ee83875b09826990de0f6bd908b6638e8c10277d415f6ab852b' # Is overwritten by ${SEARXNG_SECRET}
